@@ -53,7 +53,7 @@ a:hover{background-color: lightgreen;}
     text-align: justify;
     }
 
-#experience{
+#experience > ul{
         text-align: justify;
     }
 
