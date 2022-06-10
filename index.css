@@ -50,6 +50,7 @@ a:hover{background-color: lightgreen;}
     display: flex;
     flex-wrap: wrap;
     margin: 5px;
+    padding-right: 10px;
     text-align: justify;
     }
 
