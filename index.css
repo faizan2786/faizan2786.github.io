@@ -35,6 +35,7 @@ body{
     font-size: medium;
     font-weight: bold;
     color: red;
+    white-space: nowrap;
     }
 
 a{  /* applies to all 'a' tags */
@@ -53,7 +54,7 @@ a:hover{background-color: lightgreen;}
     text-align: justify;
     }
 
-#experience{
+ul > li{
         text-align: justify;
     }
 
