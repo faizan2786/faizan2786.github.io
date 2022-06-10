@@ -18,7 +18,7 @@ Note:   same classes are generally asscoitated with multiple tags to apply same 
 }
 
 #my-photo {
-    float: right; 
+    float: left; 
     margin-left: 1em;
     margin-bottom: 0.5em;
     margin-right: 2em; /* em is the width of character m in current font and size*/
