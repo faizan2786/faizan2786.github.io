@@ -8,6 +8,10 @@ Note:   same classes are generally asscoitated with multiple tags to apply same 
 
 */
 
+body {
+    background-image: url(background.jpg);
+}
+
 #title{
     margin-bottom: 0px;
 }
