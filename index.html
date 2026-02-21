@@ -1,82 +1,155 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Faizan's Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- adjust viewport for different devices automatically -->
-        <link type="text/css" rel="stylesheet" href="index.css" /> <!-- add css stylesheet -->
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan Patel | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        <img id="my-photo" src="my-photo.jpg" />
-        <h2 id="title"> Faizan Patel </h2>
-        <h4 class="shout inline"> (Software Developer) </h4>
+    <header class="hero">
+        <div class="container">
+            <div class="profile-header">
+                <img src="my-photo.jpg" alt="Faizan Patel" class="avatar">
+                <div class="profile-info">
+                    <h1>Faizan Patel</h1>
+                    <p class="subtitle">Software Engineer</p>
+                    <p class="tagline">Specializing in high-performance, large scale, enterprise systems</p>
+                    <div class="social-links">
+                        <a href="mailto:faizan2786@icloud.com" class="btn btn-primary">Email Me</a>
+                        <a href="https://www.linkedin.com/in/faizan-patel-fp2786" target="_blank" class="btn btn-outline">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <p class="contact"><a href="mailto: faizan2786@hotmail.com"> faizan2786@hotmail.com </a></p>
-        <span style="font-weight: bold;">
-            <a href="https://www.linkedin.com/in/faizan-patel-fp2786" target="_blank"><img src="linkedin.png"></a>
-        </span>
+    <main class="container">
         
-        <div id="intro">
+        <section id="about">
+            <h2>About</h2>
             <p>
-                 My name is <span class="loud shout"><strong>Faizan Patel</strong></span>.
-                 I am a <em>Software Developer</em> specialised in building high performance backend applications mainly in C++ using modern tools, technologies and development practices. 
-                 Currently, I am working for <span class="shout"> Torstone Technology,</span> a <em>fintech</em> firm in London, specialised in post-trade processing.
-                 I have done my <span class="shout"> MSc. in Advanced Computer Science from University of Leicester.</span>
-                <br/>
-                <br/>   
-                 I am very passionate about computing and AI. I am always keen to learn new technologies to improve my knowledge and skills and expand my horizon in the world of computing!
-                 I am open to take on a new challenge in the industry where I can contribute to develop and maintain large scale intelligent systems using my skills and where I can take my professional software development experience to a new level!
-                 <br/>
-                 <br/>
-                 <span class="shout" >You can reach out to me via e-mail or LinkedIn given above.</span>
+                Results-driven Software Engineer with <strong>8+ years of experience</strong> building enterprise-grade, high-performance backend systems. 
+                Currently working at a Fortune 500 company on a large-scale post-trade processing platform. 
+                I have a strong interest in distributed systems, data-intensive architectures, and cloud-native backend technologies.
             </p>
-        </div>
-        
-        <div id="experience">
-            <h4 class="shout">List of few projects that I have worked on:</h4>
-            <ul>
-                <li> Data analysis and reporting applications in C++ to handle high volumes of data </li>
-                <li> Asynchronous micro-services with REST APIs using C++ backend </li>
-                <li> Event-driven processes developed and deployed using latest distributed technologies like AWS, Kafka and ClickHouse </li>
-                <li> Computer vision system for pattern fabric inspection in C++ using OpenCV.</li>
-                <li> Defect Classification using Convolutional Neural Network in Python.</li>
-            </ul>
+        </section>
 
-            <h4 class="shout">Technical skills: </h4>
-            <table>
-                <tr>
-                    <th>Languages</th>
-                </tr>
-                <tr>
-                    <td>C++</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                </tr>
-                <tr>
-                    <td>Java</td>
-                </tr>
-                <tr>
-                    <td> HTML + CSS </td>
-                </tr>
-            </table>
-            <h4 class="shout"> Here are the tools/libraries/frameworks that I am familier with: </h4>
-            <ul>
-                <li> OpenCV </li>
-                <li> CMake </li>
-                <li> AWS </li>
-                <li> Kafka </li>
-                <li> Docker </li>
-                <li> Event-Driven micro-services </li>
-                <li> Numpy </li>
-                <li> Tensorflow </li>
-                <li> ClickHouse </li>
-                <li> MySQL </li>
-            </ul>
-        </div>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="tags">
+                        <span>C++ (17)</span>
+                        <span>Golang</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="tags">
+                        <span>Microservices</span>
+                        <span>REST APIs</span>
+                        <span>High-Throughput Event Processing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Infrastructure</h3>
+                    <div class="tags">
+                        <span>Kafka</span>
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="tags">
+                        <span>ClickHouse</span>
+                        <span>PostgreSQL</span>
+                        <span>OracleDB</span>
+                        <span>Cassandra</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI / ML</h3>
+                    <div class="tags">
+                        <span>TensorFlow</span>
+                        <span>OpenCV</span>
+                        <span>Neural Networks</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <script src="./index.js"></script>
-    </body>
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="job-card">
+                <div class="job-header">
+                    <h3>FIS - Fidelity National Information Services</h3>
+                    <span class="job-date">Oct 2022 – Present</span>
+                </div>
+                <p class="job-role">Software Developer | Capital Market Solutions</p>
+                <p class="job-location">London, UK</p>
+                <ul class="job-details">
+                    <li>Part of a fast-paced, agile team building a post-trade processing platform used by leading financial institutions.</li>
+                    <li>Built and deployed asynchronous microservices with RESTful APIs, enhancing system performance.</li>
+                    <li>Integrated ClickHouse as a dedicated analytical storage, substantially improving reporting speed.</li>
+                    <li>Built a cloud-native data pipeline using Kafka Connect and AWS to store and query data directly from AWS S3.</li>
+                    <li>Developed a custom query language for internal clients to simplify data access and reporting needs</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <h3>Shelton Vision Ltd</h3>
+                    <span class="job-date">Jun 2017 – Sept 2022</span>
+                </div>
+                <p class="job-role">Computer Vision & AI Software Engineer</p>
+                <p class="job-location">Kibworth, UK</p>
+                <ul class="job-details">
+                    <li>Led R&D efforts for an ambitious pattern inspection project using cutting-edge computer vision.</li>
+                    <li>Developed high-performance pattern matching and image processing algorithms using OpenCV and C++.</li>
+                    <li>Designed and deployed CNN-based classification models that improved defect detection accuracy by 20%.</li>
+                    <li>Managed full product lifecycle, from research to deployment.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-card">
+                <h3>MSc - Advanced Computer Science with Industry (Distinction)</h3>
+                <p>University of Leicester, UK | 2016 – 2018</p>
+                <div class="edu-note award-highlight">
+                    <span class="award-icon">🏆</span> 
+                    <strong>Master’s Project:</strong> CNN-based textile fabric defect classification 
+                    <br>
+                    <span class="award-label">(Awarded Best Technical Project in the Informatics Department)</span>
+                </div>
+            </div>
+            <div class="edu-card">
+                <h3>Bachelors of Technology – Electronics & Communication</h3>
+                <p>Nirma University, India | 2010 – 2014</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Faizan Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>

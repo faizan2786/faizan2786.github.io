@@ -1,88 +1,289 @@
-/*
-tag_name -> select by tag (applies style to all mentioned tags in the document)
-# -> is an id selector
-. -> is a class selector.
+:root {
+    /* Color Palette - Classy Slate & Gold */
+    --bg-color: #0f172a;       /* Slate 900 */
+    --card-bg: #1e293b;        /* Slate 800 */
+    --text-primary: #f8fafc;   /* Slate 50 */
+    --text-secondary: #94a3b8; /* Slate 400 */
+    --accent: #38bdf8;         /* Sky 400 - clean tech blue */
+    --accent-hover: #0ea5e9;   /* Sky 500 */
+    --gold: #fbbf24;           /* Amber 400 - for awards/highlights */
+    --location-color: #cbd5e1; /* Slate 300 - lighter than secondary */
+    --border-color: #334155;   /* Slate 700 */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
 
-Note:   same classes are generally asscoitated with multiple tags to apply same style on all such tags
-        There can be multiple class assciated with a single tag (separated by space) to apply multiple group of styles on it
-
-*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-image: url(background.jpg);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-#title{
-    margin-bottom: 0px;
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
 }
 
-.inline{
-    display: inline;
-    margin-top: 0px;
+ul {
+    list-style-position: inside;
 }
 
-#my-photo {
-    float: left; 
-    margin-left: 1em;
-    margin-bottom: 0.5em;
-    margin-right: 2em; /* em is the width of character m in current font and size*/
-    }
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-body{
-     font-family: Arial, Helvetica, sans-serif;
-     font-size: large;
-    } /* default font family for entire body (in the order of decreasing preference)*/
+/* Header / Hero */
+.hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 60px;
+}
 
-.contact{
-    margin-top: 1em;
-    margin-bottom: 5px;
-    font-size: medium;
-    font-weight: bold;
-    color: red;
-    }
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
-a{  /* applies to all 'a' tags */
-    font-family: monospace; 
-    font-size: large ;
-    }
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
 
-/* style when hover mouse over a link */
-a:hover{background-color: lightgreen;}
+.profile-info h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
 
-#intro{
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    border-color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Sections */
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+    line-height: 1.2;
+}
+
+/* Cards (Experience & Education) */
+.job-card, .edu-card {
+    background-color: var(--card-bg); /* Subtle card background */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.job-header h3, .edu-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.job-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+.job-role {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 4px; /* Reduced margin to keep location close */
+}
+
+.job-location {
+    font-size: 0.95rem;
+    color: var(--location-color); /* Distinct lighter color */
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+.job-location::before {
+    content: "📍 "; /* Simple location pin icon */
+    margin-right: 6px;
+    font-style: normal;
+}
+
+.job-details {
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+.job-details li {
+    margin-bottom: 8px;
+}
+
+/* Education Highlight */
+.edu-note {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.award-highlight {
+    border-left: 4px solid var(--gold);
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.1) 0%, rgba(30, 41, 59, 0) 100%);
+    color: var(--text-primary);
+}
+
+.award-icon {
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.award-label {
+    display: block;
+    margin-top: 4px;
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.tags {
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
-    padding-right: 10px;
-    text-align: justify;
-    }
-
-ul > li{
-        text-align: justify;
-    }
-
-.shout{
-    color: red;
-    }
-
-.loud{
-    font-family: 'Courier New';
-    text-transform: uppercase;
-    }
-
-/* display all borders for table */
-table, th, td{
-    padding: 10px;
-    font-size: medium;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-collapse: collapse;
+    gap: 10px;
 }
 
-th { color: red; }
+.tags span {
+    background-color: rgba(56, 189, 248, 0.1); /* Low opacity accent */
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
 
-td:first-child{color: blue;}  /* applies to first column in the table */
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 80px;
+}
 
-/* tr:nth-child(2){color: magenta;} /* applies to second row */
+/* Responsive */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .job-header {
+        flex-direction: column;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
 
+    h1 {
+        font-size: 2rem;
+    }
+}
