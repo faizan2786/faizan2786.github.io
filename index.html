@@ -6,92 +6,94 @@
     <title>Faizan Patel | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <div class="profile-header">
-                <img src="my-photo.jpg" alt="Faizan Patel" class="avatar">
-                <div class="profile-info">
-                    <h1>Faizan Patel</h1>
-                    <p class="subtitle">Software Engineer</p>
-                    <p class="tagline">Specializing in high-performance, large scale, enterprise systems</p>
-                    <div class="social-links">
-                        <a href="mailto:faizan2786@icloud.com" class="btn btn-primary">Email Me</a>
-                        <a href="https://www.linkedin.com/in/faizan-patel-fp2786" target="_blank" class="btn btn-outline">
-                            LinkedIn
-                        </a>
-                    </div>
-                </div>
+    <!-- Persistent Header with Navigation -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="brand">
+                <h1>Faizan Patel</h1>
+                <p>Software Developer</p>
             </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-tab="home">Home</button>
+                <button class="nav-btn" data-tab="experience">Experience</button>
+                <button class="nav-btn" data-tab="projects">Projects</button>
+                <button class="nav-btn" data-tab="education">Education</button>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container content-wrapper">
         
-        <section id="about">
-            <h2>About</h2>
-            <p>
-                Results-driven Software Engineer with <strong>8+ years of experience</strong> building enterprise-grade, high-performance backend systems. 
-                Currently working at a Fortune 500 company on a large-scale post-trade processing platform. 
-                I have a strong interest in distributed systems, data-intensive architectures, and cloud-native backend technologies.
-            </p>
-        </section>
+        <!-- HOME TAB -->
+        <section id="home" class="tab-content active">
+            <div class="hero-section">
+                <img src="my-photo.jpg" alt="Faizan Patel" class="avatar-large">
+                <div class="hero-text">
+                    <h2>Hi, I'm Faizan</h2>
+                    <p class="intro-lead">
+                        I am a <strong>Software Developer</strong> specialized in building high-performance backend applications with 8+ years of industry experience in FinTech and AI-driven computer vision.
+                    </p>
+                    <p>
+                        I have a deep passion for computing and AI, constantly exploring new technologies to expand my horizons. 
+                        My primary focus is on designing and building distributed systems with highly scalable architectures for enterprise-grade applications.
+                    </p>
+                    <p class="highlight-box">
+                        Recently, I have been thoroughly enjoying learning <strong>Go (Golang)</strong> and building projects to strengthen my understanding of cloud-native development and high-concurrency patterns.
+                    </p>
+                    <div class="social-links-hero">
+                        <a href="mailto:faizan2786@hotmail.com" class="btn btn-primary">Email Me</a>
+                        <a href="https://www.linkedin.com/in/faizan-patel-fp2786" target="_blank" class="btn btn-outline">LinkedIn</a>
+                        <a href="https://github.com/faizan2786" target="_blank" class="btn btn-outline">GitHub</a>
+                    </div>
+                </div>
+            </div>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="tags">
-                        <span>C++ (17)</span>
-                        <span>Golang</span>
-                        <span>Python</span>
-                        <span>SQL</span>
+            <div class="skills-section">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="tags">
+                            <span>C++ (17)</span>
+                            <span>Golang</span>
+                            <span>Python</span>
+                            <span>SQL</span>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="tags">
-                        <span>Microservices</span>
-                        <span>REST APIs</span>
-                        <span>High-Throughput Event Processing</span>
+                    <div class="skill-category">
+                        <h4>Backend & Cloud</h4>
+                        <div class="tags">
+                            <span>Microservices</span>
+                            <span>REST APIs</span>
+                            <span>High Throughput Event Processing</span>
+                            <span>Kafka</span>
+                            <span>AWS</span>
+                            <span>Docker</span>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Infrastructure</h3>
-                    <div class="tags">
-                        <span>Kafka</span>
-                        <span>AWS</span>
-                        <span>Docker</span>
-                        <span>Redis</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="tags">
-                        <span>ClickHouse</span>
-                        <span>PostgreSQL</span>
-                        <span>OracleDB</span>
-                        <span>Cassandra</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>AI / ML</h3>
-                    <div class="tags">
-                        <span>TensorFlow</span>
-                        <span>OpenCV</span>
-                        <span>Neural Networks</span>
+                    <div class="skill-category">
+                        <h4>Data & AI</h4>
+                        <div class="tags">
+                            <span>ClickHouse</span>
+                            <span>Oracle DB</span>
+                            <span>Cassandra</span>
+                            <span>Redis</span>
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
+        <!-- EXPERIENCE TAB -->
+        <section id="experience" class="tab-content">
+            <h2 class="section-title">Professional Experience</h2>
             
             <div class="job-card">
                 <div class="job-header">
@@ -101,11 +103,11 @@
                 <p class="job-role">Software Developer | Capital Market Solutions</p>
                 <p class="job-location">London, UK</p>
                 <ul class="job-details">
-                    <li>Part of a fast-paced, agile team building a post-trade processing platform used by leading financial institutions.</li>
-                    <li>Built and deployed asynchronous microservices with RESTful APIs, enhancing system performance.</li>
-                    <li>Integrated ClickHouse as a dedicated analytical storage, substantially improving reporting speed.</li>
+                    <li>Part of a fast-paced, agile team building a post-trade processing platform used by leading financial institutions globally.</li>
+                    <li>Built and deployed asynchronous microservices with RESTful APIs, resulting in significant performance improvements.</li>
+                    <li>Integrated ClickHouse as a dedicated analytical storage, substantially improving stock position reporting performance.</li>
                     <li>Built a cloud-native data pipeline using Kafka Connect and AWS to store and query data directly from AWS S3.</li>
-                    <li>Developed a custom query language for internal clients to simplify data access and reporting needs</li>
+                    <li>Developed a custom query language for internal clients to allow them to create data queries using simple business language.</li>
                 </ul>
             </div>
 
@@ -117,7 +119,7 @@
                 <p class="job-role">Computer Vision & AI Software Engineer</p>
                 <p class="job-location">Kibworth, UK</p>
                 <ul class="job-details">
-                    <li>Led R&D efforts for an ambitious pattern inspection project using cutting-edge computer vision.</li>
+                    <li>Led R&D efforts for an ambitious pattern inspection project, implementing cutting-edge computer vision solutions.</li>
                     <li>Developed high-performance pattern matching and image processing algorithms using OpenCV and C++.</li>
                     <li>Designed and deployed CNN-based classification models that improved defect detection accuracy by 20%.</li>
                     <li>Managed full product lifecycle, from research to deployment.</li>
@@ -125,8 +127,79 @@
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
+        <!-- PROJECTS TAB -->
+        <section id="projects" class="tab-content">
+            <h2 class="section-title">Recent Personal Projects</h2>
+            <p class="section-subtitle">Exploring Golang and Distributed Systems</p>
+
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Event-Driven CDC Pipeline</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/faizan2786/event-driven-cdc-pipeline" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        A robust Change Data Capture (CDC) pipeline demonstrating event-driven architecture. Simulates business events, consumes them to update a primary database, and syncs external systems in real-time.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Go</span>
+                        <span>Kafka</span>
+                        <span>PostgreSQL</span>
+                        <span>Cassandra</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Hit</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/faizan2786/hit" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        A high-performance, concurrent HTTP server benchmarking tool. Allows users to load test web servers with configurable concurrency levels and rate limiting to analyze system throughput.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Go</span>
+                        <span>Concurrency</span>
+                        <span>CLI</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Redis Clone</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/faizan2786/redis-clone" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        A lightweight implementation of a Redis server. Handles client communication using the Redis Serialization Protocol (RESP) and supports core key-value operations.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Go</span>
+                        <span>TCP/IP</span>
+                        <span>RESP Protocol</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION TAB -->
+        <section id="education" class="tab-content">
+            <h2 class="section-title">Academic Background</h2>
             <div class="edu-card">
                 <h3>MSc - Advanced Computer Science with Industry (Distinction)</h3>
                 <p>University of Leicester, UK | 2016 – 2018</p>
@@ -147,9 +220,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Faizan Patel. All rights reserved.</p>
+            <p>&copy; 2026 Faizan Patel</p>
         </div>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
